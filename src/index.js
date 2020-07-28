@@ -5,14 +5,14 @@ const mysql = require('mysql2');
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Lee@nge1o',
+    password: 'Bruno18!',
     database: 'todo'
 });
 
 try {
     connection.connect();
 } catch (e) {
-    console.log('connection failed');
+    console.log('Sorry, lost connection');
     console.log(e);
 }
 
@@ -21,7 +21,7 @@ api.use(express.static(__dirname + '/public'));
 api.use(bodyParser.json())
 
 api.listen(3000, () => {
-    console.log('API up and running!');
+    console.log('We are up and running!');
 });
 
 api.get('/tasks', (req, res) => {
